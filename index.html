@@ -255,6 +255,9 @@
       function revealMain() {
         if (finished) return;
         finished = true;
+        // Prepare main content for a slow fade-in
+        main.style.opacity = '0';
+        main.style.transition = 'opacity 1.4s ease';
         main.classList.remove('hidden');
         // Hide the intro instantly so the hero is at the top of the viewport
         intro.style.display = 'none';
@@ -264,6 +267,10 @@
         if (hero && hero.scrollIntoView) {
           hero.scrollIntoView({ block: 'start', behavior: 'auto' });
         }
+        // Trigger the fade-in on the next frame
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => { main.style.opacity = '1'; });
+        });
         window.dispatchEvent(new Event('resize'));
       }
 
