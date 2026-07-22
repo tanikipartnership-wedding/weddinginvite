@@ -48,7 +48,8 @@ h2 { font-size: clamp(2.4rem, 7vw, 4.2rem); font-weight: 600; }
 .hero + .section { padding-top: 6px; }
 
 /* Tighter top spacing above the Wedding festivities section. */
-.events-section { padding-top: 0; }
+.events-section { padding-top: 5px; }
+
 p { line-height: 1.8; color: var(--muted); }
 .eyebrow {
   text-transform: uppercase;
