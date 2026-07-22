@@ -232,12 +232,13 @@ button:hover:not(.envelope), .primary-btn:hover, .secondary-btn:hover { transfor
   gap: 12px;
   margin-top: 20px;
 }
-.countdown div, .event-card, .family-grid div, .venue-section, .rsvp-section form {
+.countdown div, .event-card, .family-grid div, .venue-card, .rsvp-section form {
   background: rgba(255, 253, 248, .74);
   border: 1px solid rgba(184, 137, 69, .2);
   border-radius: 24px;
   box-shadow: var(--shadow);
 }
+.venue-card { padding: 24px 18px; }
 .countdown div { padding: 18px 8px; }
 .countdown span { display: block; font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--gold); font-weight: 700; }
 .countdown small { color: var(--muted); }
