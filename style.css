@@ -485,6 +485,12 @@ button:hover:not(.envelope), .primary-btn:hover, .secondary-btn:hover { transfor
   color: var(--brown);
   line-height: 1.75;
 }
+.venue-card .blessing-group {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.14rem;
+  color: var(--brown);
+  line-height: 1.75;
+}
 .family-card .blessing-names {
   margin-top: 2px;
   margin-bottom: 14px;
