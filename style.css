@@ -444,7 +444,7 @@ button:hover:not(.envelope), .primary-btn:hover, .secondary-btn:hover { transfor
 .events-section,
 .family-section,
 .venue-section {
-  padding: 14px 0;
+  padding: 14px;
 }
 .blessings-text {
   font-family: 'Cormorant Garamond', serif;
