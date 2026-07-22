@@ -443,7 +443,7 @@ button:hover:not(.envelope), .primary-btn:hover, .secondary-btn:hover { transfor
 }
 
 .family-section {
-  padding: 72px 0;
+  padding: 14px 0;
 }
 .blessings-text {
   font-family: 'Cormorant Garamond', serif;
@@ -610,7 +610,7 @@ footer h3 { font-size: 2rem; }
 }
 
 @media (max-width: 680px) {
-  .section { padding: 58px 0; }
+  .section { padding: 14px 0; }
   .hero + .section { padding-top: 10px; }
   .hero {
     width: min(100%, 520px);
