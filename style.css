@@ -444,7 +444,8 @@ button:hover:not(.envelope), .primary-btn:hover, .secondary-btn:hover { transfor
   color: var(--muted);
 }
 
-.family-section {
+.family-section,
+.venue-section {
   padding: 14px 0;
 }
 .blessings-text {
