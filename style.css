@@ -634,14 +634,14 @@ footer h3 { font-size: 2rem; }
   }
   .events-section
   {
-    padding-top: 50px;
+    padding-top: 60px;
   }
   .family-section
   {
-    padding-top: 30px;
+    padding-top: 40px;
   }
   .venue-section {
-    padding-top: 50px;
+    padding-top: 60px;
   }
   .hero {
     width: min(100%, 520px);
