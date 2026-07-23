@@ -30,18 +30,18 @@ body {
 
 .countdown-section
 {
-  padding: 40px 10px;
+  padding: 30px 10px;
 }
 .events-section
 {
-  padding: 40px 10px;
+  padding: 30px 10px;
 }
 .family-section
 {
-  padding: 40px 10px;
+  padding: 30px 10px;
 }
 .venue-section {
-  padding: 40px 10px;
+  padding: 30px 10px;
 }
 
 h1, h2, h3 { font-family: 'Cormorant Garamond', serif; margin: 0; }
@@ -630,18 +630,18 @@ footer h3 { font-size: 2rem; }
 @media (max-width: 680px) {
   .countdown-section
   {
-    padding: 40px 10px;
+    padding: 30px 10px;
   }
   .events-section
   {
-    padding: 40px 10px;
+    padding: 30px 10px;
   }
   .family-section
   {
-    padding: 40px 10px;
+    padding: 30px 10px;
   }
   .venue-section {
-    padding: 40px 10px;
+    padding: 30px 10px;
   }
   .hero {
     width: min(100%, 520px);
