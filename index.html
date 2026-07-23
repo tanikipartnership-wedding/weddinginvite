@@ -129,7 +129,7 @@
 <body>
   <div class="desktop-notice">For the best experience, please open on a mobile device</div>
 
-  <audio id="bgMusic" preload="auto" autoplay loop playsinline>
+  <audio id="bgMusic" preload="auto">
     <source src="assets/bgmusic.mp3" type="audio/mpeg" />
   </audio>
 
@@ -237,43 +237,6 @@
       const musicBtn = document.getElementById('musicBtn');
       let started = false;
       let finished = false;
-      let musicStarted = false;
-
-      // === Auto-start background music ASAP ===
-      // Browsers (especially iOS Safari) block unmuted audio autoplay until
-      // the user interacts with the page. We try immediately on load, and if
-      // that fails we start the song on the very first interaction of any
-      // kind (touch, click, key, scroll) — before the envelope click.
-      function startMusic() {
-        if (musicStarted || !music) return;
-        return music.play()
-          .then(() => {
-            musicStarted = true;
-            musicBtn && musicBtn.classList.add('playing');
-            console.log('[music] started');
-            removeGestureListeners();
-          })
-          .catch(err => {
-            console.log('[music] autoplay blocked:', err && err.name);
-          });
-      }
-
-      function onFirstGesture() { startMusic(); }
-      function addGestureListeners() {
-        ['pointerdown', 'touchstart', 'click', 'keydown', 'scroll']
-          .forEach(ev => window.addEventListener(ev, onFirstGesture, { once: false, passive: true, capture: true }));
-      }
-      function removeGestureListeners() {
-        ['pointerdown', 'touchstart', 'click', 'keydown', 'scroll']
-          .forEach(ev => window.removeEventListener(ev, onFirstGesture, { capture: true }));
-      }
-
-      // Try immediately, and again once the audio element is ready.
-      startMusic();
-      if (music) {
-        music.addEventListener('canplaythrough', startMusic, { once: true });
-      }
-      addGestureListeners();
 
       // === diagnostics ===
       console.log('canPlayType video/mp4:', video.canPlayType('video/mp4'));
@@ -322,11 +285,17 @@
         if (started) return;
         started = true;
         console.log('[intro] click — attempting play');
-        // Music will already be starting (or started) from the earlier
-        // autoplay/gesture logic, but call again as a safety net in case
-        // this is the very first interaction.
-        startMusic();
-
+        // Start background music FIRST (independent of video) so it plays
+        // during the envelope video, not just after it ends.
+        if (music) {
+          music.play()
+            .then(() => {
+              console.log('[music] started during envelope video');
+              musicBtn && musicBtn.classList.add('playing');
+            })
+            .catch(err => console.log('[music] play failed:', err && err.name, err && err.message));
+        }
+        
         try {
           video.muted = false;
           video.volume = 1;
