@@ -345,7 +345,7 @@ button:hover:not(.envelope), .primary-btn:hover, .secondary-btn:hover { transfor
   display: grid; 
   grid-template-columns: repeat(2, 1fr);
   gap: 24px; 
-  margin-top: 34px; 
+  margin-top: 0; 
 }
 .event-item {
   display: flex;
