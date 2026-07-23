@@ -30,17 +30,14 @@ body {
 
 .countdown-section
 {
-  padding-top: 30px;
+  padding-top: 40px;
 }
 .events-section
 {
-  padding-top: 30px;
+  padding-top: 50px;
 }
 .family-section
 {
-  padding-top: 30px;
-}
-.venue-section {
   padding-top: 30px;
 }
 
@@ -630,18 +627,18 @@ footer h3 { font-size: 2rem; }
 @media (max-width: 680px) {
   .countdown-section
   {
-    padding-top: 30px;
+    padding-top: 40px;
   }
   .events-section
   {
-    padding-top: 30px;
+    padding-top: 50px;
   }
   .family-section
   {
     padding-top: 30px;
   }
   .venue-section {
-    padding-top: 30px;
+    padding-top: 50px;
   }
   .hero {
     width: min(100%, 520px);
