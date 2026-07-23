@@ -29,6 +29,14 @@ body {
   position: relative;
 }
 
+/* Give the three main content sections an equal, larger top padding
+   so the visual rhythm between them matches. */
+.events-section,
+.family-section,
+.venue-section {
+  padding-top: 40px;
+}
+
 h1, h2, h3 { font-family: 'Cormorant Garamond', serif; margin: 0; }
 h2 { font-size: clamp(2.4rem, 7vw, 4.2rem); font-weight: 600; }
 
@@ -486,6 +494,13 @@ button:hover:not(.envelope), .primary-btn:hover, .secondary-btn:hover { transfor
 .family-card .blessing-group,
 .venue-card .blessing-group {
   margin-bottom: 2px;
+}
+
+/* Match the tight h3 -> p spacing used inside .family-note so the gap
+   between "Join us here" and "Novotel..." mirrors the gap between
+   "Love from" and "Suhanee & Nishita Mimani". */
+.venue-card p {
+  margin: 0;
 }
 .family-card .together-with {
   margin-top: 14px;
