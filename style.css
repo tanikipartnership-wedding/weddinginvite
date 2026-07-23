@@ -24,17 +24,24 @@ body {
 .section {
   width: min(92%, 920px);
   margin: 0 auto;
-  padding: 14px 14px;
   text-align: center;
   position: relative;
 }
 
-/* Give the three main content sections an equal, larger top padding
-   so the visual rhythm between them matches. */
-.events-section,
-.family-section,
+.countdown-section
+{
+  padding: 40px 10px;
+}
+.events-section
+{
+  padding: 40px 10px;
+}
+.family-section
+{
+  padding: 40px 10px;
+}
 .venue-section {
-  padding-top: 40px;
+  padding: 40px 10px;
 }
 
 h1, h2, h3 { font-family: 'Cormorant Garamond', serif; margin: 0; }
